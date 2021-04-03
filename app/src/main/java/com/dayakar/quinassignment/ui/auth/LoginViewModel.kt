@@ -10,6 +10,7 @@ import com.google.firebase.auth.UserProfileChangeRequest
 sealed class LoginStatus{
     class Failed(val msg:String?):LoginStatus()
     object Success : LoginStatus()
+    object None:LoginStatus()
 
 }
 class LoginViewModel : ViewModel() {
@@ -30,6 +31,10 @@ class LoginViewModel : ViewModel() {
             _loginStatus.value=LoginStatus.Failed(it.message)
         }
 
+    }
+
+    fun removeSuccessCallback(){
+        _loginStatus.value=LoginStatus.None
     }
 
      fun signUpUser(email:String,password:String,userName:String){

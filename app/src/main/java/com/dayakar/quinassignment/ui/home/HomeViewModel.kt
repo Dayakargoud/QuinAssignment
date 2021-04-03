@@ -13,11 +13,6 @@ import com.google.firebase.storage.ktx.storage
 
 class HomeViewModel : ViewModel() {
 
-    private val currentSearch=MutableLiveData<String>()
-
-
-
-    private val storageRef = Firebase.storage.reference
     private var _allStories = MutableLiveData<List<Story>>()
     val allStories: LiveData<List<Story>> get() = _allStories
 
@@ -61,9 +56,8 @@ class HomeViewModel : ViewModel() {
                     for (eventSnapShot in postSnapshot.children) {
                         val item: Story? = eventSnapShot.getValue(Story::class.java)
                         if (item != null) {
-
                             listEvent.add(item)
-                            println(item)
+
                         }
 
                     }

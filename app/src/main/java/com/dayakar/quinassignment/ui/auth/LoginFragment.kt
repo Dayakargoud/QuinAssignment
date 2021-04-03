@@ -72,11 +72,15 @@ class LoginFragment : Fragment() {
                     binding.progressbar.visibility=View.VISIBLE
                     Toast.makeText(context, "Login Success", Toast.LENGTH_SHORT).show()
                     findNavController().navigateUp()
+                    viewModel.removeSuccessCallback()
                 }
                 is LoginStatus.Failed->{
                     binding.progressbar.visibility=View.INVISIBLE
                     Toast.makeText(context,it.msg , Toast.LENGTH_SHORT).show()
                     binding.loginButton.isEnabled=true
+                }
+                else -> {
+
                 }
             }
 

@@ -15,9 +15,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class HomeFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = HomeFragment()
-    }
+
 
     private lateinit var viewModel: HomeViewModel
     private lateinit var binding:HomeFragmentBinding
@@ -114,30 +112,26 @@ class HomeFragment : Fragment() {
                 if (currentUser != null) {
 
                     FirebaseAuth.getInstance().signOut()
-                    updateUI()
+                   findNavController().navigate(R.id.loginFragment)
                 }
             }
             R.id.add_story->{
                 findNavController().navigate(R.id.addStoryFragment)
             }
-            R.id.action_search ->{
 
-            }
         }
 
         return super.onOptionsItemSelected(item)
     }
 
-    private fun updateUI(){
+
+
+    override fun onStart() {
+        super.onStart()
         val user=mAuth.currentUser
         if (user==null){
             findNavController().navigate(R.id.loginFragment)
         }
-    }
-
-    override fun onStart() {
-        super.onStart()
-       updateUI()
     }
     override fun onAttach(context: Context) {
         super.onAttach(context)

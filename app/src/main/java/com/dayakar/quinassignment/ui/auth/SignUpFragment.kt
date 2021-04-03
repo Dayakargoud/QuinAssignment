@@ -61,16 +61,19 @@ class SingnUpFragment : Fragment() {
         viewModel.signUpStatus.observe(viewLifecycleOwner, Observer {
 
             when(it){
-
                 is LoginStatus.Success->{
                     binding.progressbar.visibility=View.GONE
                     Toast.makeText(context, "SignUp Success", Toast.LENGTH_SHORT).show()
                     findNavController().navigate(R.id.homeFragment)
+                    viewModel.removeSuccessCallback()
                 }
                 is LoginStatus.Failed->{
                     Toast.makeText(context, "SignUp Failed ${it.msg}", Toast.LENGTH_SHORT).show()
                     binding.progressbar.visibility=View.GONE
                     binding.buttonSignup.isEnabled=true
+                }
+                else -> {
+
                 }
             }
 
