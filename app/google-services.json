@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "236238856698",
+    "firebase_url": "https://university-latest-updates-default-rtdb.firebaseio.com",
+    "project_id": "university-latest-updates",
+    "storage_bucket": "university-latest-updates.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236238856698:android:3b4a201e5845c7ef974443",
+        "android_client_info": {
+          "package_name": "com.dayakar.quinassignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "236238856698-ieb7k65hnkniea3n1cbq4s8gglrjie4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq1uTKeEM3FNV15i0FKjuDxgaDtiPu-B0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "236238856698-ieb7k65hnkniea3n1cbq4s8gglrjie4l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+ >
+
+    <TextView
+        android:id="@+id/post_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="Dayakar Goud"
+        android:layout_margin="4dp"
+        android:textStyle="bold"
+        android:drawableStart="@drawable/ic_baseline_account_circle_24"
+        android:drawablePadding="2dp"
+        />
+    <TextView
+        android:id="@+id/post_tagged_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:layout_below="@+id/post_user_name"
+        android:layout_marginStart="8dp"
+        android:text="Hyderbad"
+        android:drawableStart="@drawable/ic_baseline_location_on_24"
+        android:drawablePadding="2dp"
+        />
+
+      <ImageView
+          android:id="@+id/story_image"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:scaleType="fitXY"
+          android:layout_below="@+id/post_tagged_location"
+          tools:background="@tools:sample/backgrounds/scenic"
+          android:layout_marginTop="2dp"
+          />
+
+        <TextView
+            android:id="@+id/story_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/story_image"
+            android:layout_margin="4dp"
+            android:text="Finally at reached..."
+            android:maxLines="2"
+            android:ellipsize="end"
+            />
+</RelativeLayout>

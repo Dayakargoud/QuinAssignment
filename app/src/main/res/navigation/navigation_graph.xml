@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.dayakar.quinassignment.ui.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/login_fragment" />
+    <fragment
+        android:id="@+id/singnUpFragment"
+        android:name="com.dayakar.quinassignment.SingnUpFragment"
+        android:label="Sign Up" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.dayakar.quinassignment.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/home_fragment" />
+    <fragment
+        android:id="@+id/addStoryFragment"
+        android:name="com.dayakar.quinassignment.ui.addStory.AddStoryFragment"
+        android:label="Add story"
+        tools:layout="@layout/add_story_fragment" />
+    <fragment
+        android:id="@+id/storyDetailsFragment"
+        android:name="com.dayakar.quinassignment.ui.details.StoryDetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/story_details_fragment" />
+</navigation>
